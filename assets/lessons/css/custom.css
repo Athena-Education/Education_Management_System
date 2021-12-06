@@ -1,0 +1,101 @@
+.form-group {
+  display: inline;
+  margin-bottom: 15px;
+}
+
+.form-group input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+.form-group label {
+  position: relative;
+  cursor: pointer;
+}
+
+.form-group label:before {
+  content:'';
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid #097e97;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 6px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.form-group input:checked + label:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 5px;
+  height: 11px;
+  border: solid #097e97;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.question-header-left{
+  font-size: 18px;
+}
+.question-header-right{
+  font-size: 15px;
+}
+.question-search-input{
+  height: 44px;
+  border-radius: 0px;
+}
+.border-5-info{
+  border: 1px solid #17a2b8;
+}
+.border-5-info:hover{
+  border: 1px solid #117a8b;
+}
+.user-course-questions:hover{
+  background-color: #f7f8fa;
+}
+.width-10-px{
+  width: 10px;
+}
+.icon-upvot-comment{
+  background-color: #ffffff00;
+  color: #6c757d;
+}
+.icon-upvot-comment span{
+  font-size: 12px;
+}
+.icon-upvot-comment:hover{
+  background-color: #ffffff00;
+}
+.add-question-form input{
+  border-radius: 0px;
+  height: 44px;
+}
+.text-12{
+  font-size: 12px;
+  color: #9f9f9f;
+}
+.text-15{
+  font-size: 15px;
+}
+.text-14{
+  font-size: 14px;
+  color: #8f8f8f;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.rounded-50{
+  border-radius: 50px;
+}
+.text-mute{
+  color: #afafaf;
+}

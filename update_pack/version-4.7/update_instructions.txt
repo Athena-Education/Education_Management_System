@@ -1,0 +1,14 @@
+Please follow the instructions carefully.
+
+N.B :
+ - BEFORE UPDATING TO THE LATEST VERSION, WE WOULD HIGHLY APPRECIATE IF YOU KEEP A 	BACKUP OF THE EXISTING VERSION.
+
+ - Before updating to version 4.7, make sure that you currently running your product on version 4.6.
+
+Let's proceed,
+
+- Go to system settings from settings menu in admin panel
+- Move to the section 'Update Product' on that page
+- Upload the file 'update_4.7.zip' which is located at update_pack > version-4.7 folder inside your copy of Academy app downloaded from Codecanyon.
+- Hit the button 'Update'.
+- That's it

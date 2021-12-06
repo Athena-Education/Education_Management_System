@@ -1,0 +1,427 @@
+.title_icon {
+  font-size: 25px;
+  vertical-align: middle;
+}
+
+.alignToTitle {
+  float: right;
+}
+
+.required {
+  color: #f44336;
+}
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.not-active {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: black;
+}
+
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+// variables
+$base-color: cadetblue;
+$base-font: 'Raleway', sans-serif;
+
+.wrapper-image-preview{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  display: block;
+  /* min-width: 300px; */
+  height: 250px;
+  margin: 10px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  overflow: hidden;
+}
+
+.upload-options {
+  cursor: pointer;
+  position: relative;
+  height: 50px;
+  background-color: $base-color;
+  cursor: pointer;
+  overflow: hidden;
+  text-align: center;
+  transition: background-color ease-in-out 150ms;
+  &:hover {
+    background-color: lighten($base-color, 10%);
+  }
+  & input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+  & label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-weight: 400;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    overflow: hidden;
+    &::after {
+      content: 'add';
+      font-family: 'Material Icons';
+      position: absolute;
+      font-size: 2.5rem;
+      color: rgba(230, 230, 230, 1);
+      top: calc(50% - 2.5rem);
+      left: calc(50% - 1.25rem);
+      z-index: 0;
+    }
+    & span {
+      display: inline-block;
+      width: 50%;
+      height: 100%;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      vertical-align: middle;
+      text-align: center;
+      &:hover i.material-icons {
+        color: lightgray;
+      }
+    }
+  }
+}
+.js--image-preview {
+  height: 200px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-image: url('https://www.l-nutra.com/wp-content/uploads/2018/07/placeholder.png');
+  background-color: white;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &::after {
+    content: "photo_size_select_actual";
+    font-family: 'Material Icons';
+    position: relative;
+    font-size: 4.5em;
+    color: rgba(230, 230, 230, 1);
+    top: calc(50% - 3rem);
+    left: calc(50% - 2.25rem);
+    z-index: 0;
+  }
+  &.js--no-default::after {
+    display: none;
+  }
+  &:nth-child(2) {
+    background-image: url('http://bastianandre.at/giphy.gif');
+  }
+}
+
+i.material-icons {
+  transition: color 100ms ease-in-out;
+  font-size: 2.25em;
+  line-height: 55px;
+  color: white;
+  display: block;
+}
+
+.drop {
+  display: block;
+  position: absolute;
+  background: transparentize($base-color, .8);
+  border-radius: 100%;
+  transform:scale(0);
+}
+
+.animate {
+  animation: ripple 0.4s linear;
+}
+
+.upload-options .btn {
+  cursor: pointer;
+}
+
+@keyframes ripple {
+  100% {opacity: 0; transform: scale(2.5);}
+}
+
+.float{
+  /* top: 70%; */
+  position: fixed;
+  padding: 13px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #727cf5;
+  color: #fff;
+  border-radius: 6px;
+  text-align: center;
+  border-color: #727cf5;
+  box-shadow: 2px 2px 3px #999;
+}
+.float:focus{
+  box-shadow: 0 0 0 0.2rem rgba(135,144,247,.5);
+  color: #fff;
+}
+.float:hover{
+  box-shadow: 0 0 0 0.2rem rgba(135,144,247,.5);
+  color: #fff;
+}
+
+.my-float{
+  color: #fff;
+}
+
+.nav-link {
+  padding: .5rem .5rem;
+}
+
+.category-action .action-icon {
+  color: #98a6ad;
+  font-size: 1.2rem;
+  display: inline-block;
+  padding: 0 3px;
+}
+/* Academy Version 1.4 */
+.form-control:disabled, .form-control[readonly]
+{
+    background-color:unset;
+}
+.bootstrap-tagsinput {
+    width: 100%;
+}
+.bootstrap-tagsinput .tag {
+  background-color: rgb(239, 114, 115);
+  border-radius: 3px;
+  padding: 0 3px;
+}
+.message_sending_time{
+    display: block;
+    padding: 5px;
+    font-size: 9px;
+    color: #a2a0a0;
+}
+.nav-pills .nav-link {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.draggable-item {
+    cursor: all-scroll;
+}
+.thinner-card-body {
+  padding: 1.0rem;
+}
+.display-none {
+  display: none;
+}
+/* This css is responsible for preventing body scrolling when the modal is opened */
+body.show {
+    overflow: hidden;
+    position: fixed;
+}
+/* This css is responsible for modal scrolling when the modal scrolling is not working */
+.modal {
+  overflow-y:auto;
+}
+.overfloy-y-auto{
+  overflow-y: auto;
+}
+.max-height-475{
+  max-height: 475px;
+}
+.min-height-125{
+  min-height: 125px;
+}
+.hidden {
+    display: none;
+}
+.new-theme-alert {
+    padding: 27px;
+}
+.new-theme-alert a{
+    float: right;
+    margin-top: -7px;
+}
+.visit_website {
+  padding: calc(32px / 2) 0;
+  overflow: hidden;
+}
+
+.loader-modal{
+  position: fixed;
+  width: 100%;
+  display: none;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #b9b9b978;
+  z-index: 1000;
+  color: #6a7b66;
+  text-align: center;
+  padding-top: 100px;
+}
+
+
+
+/******* Ajax  page loader bar *******/
+.ajax_loader {
+  border-radius:10px;
+  border:0px;
+  position:relative;
+  padding:0px;
+  background-color: #aae8d000;
+  height: 3px;
+}
+.ajax_loader:before {
+  content:'';
+  border:0;
+  border-radius:10px;
+  position:absolute;
+  margin: 0px;
+  padding: 0px;
+}
+.ajax_loader .ajax_loaderBar {
+  background-color: #0acf9700;
+  position:absolute;
+  border-radius:10px;
+  top:0;
+  right:100%;
+  bottom:0;
+  left:0;
+  width:0;
+  animation:borealisBar 1s linear infinite;
+}
+.start_ajax_loading{
+  background-color: #aae8d0 !important;
+}
+.start_ajax_loading .ajax_loaderBar{
+  background-color: #0acf97 !important;
+}
+
+@keyframes borealisBar {
+  0% {
+    left:0%;
+    right:100%;
+    width:0%;
+  }
+  10% {
+    left:0%;
+    right:75%;
+    width:25%;
+  }
+  90% {
+    right:0%;
+    left:75%;
+    width:25%;
+  }
+  100% {
+    left:100%;
+    right:0%;
+    width:0%;
+  }
+}
+/******** End ajax  page loader bar ********/
+
+.course-provider-logo{
+    height: 60px;
+    width: 100%;
+    line-height: 50px;
+    border-radius: 5px;
+    padding: 8px;
+  }
+  .course-provider-logo .ispring{
+    width: 100%;
+    max-width: 134px;
+  }
+  .course-provider-logo .articulate{
+    width: 100%;
+    max-width: 134px;
+  }
+  .course-provider-logo .adobe_captivate{
+    width: 100%;
+    max-width: 134px;
+  }
+  .course-provider-logo:hover{
+    border: 1px solid rgb(0, 208, 79);
+    box-shadow: 0px 10px 10px -8px #bcbcbc;
+    padding: 5px;
+  }
+  .course-provider-logo-checked{
+    border: 1px solid rgb(0, 208, 79);
+    box-shadow: 0px 10px 10px -8px #bcbcbc;
+    padding: 5px;
+  }
+  .cursor-pointer{
+    cursor: pointer;
+  }
+
+.text-10{
+  font-size: 10px;
+}
+.text-11{
+  font-size: 11px;
+}
+.text-12{
+  font-size: 12px;
+}
+.text-13{
+  font-size: 13px;
+}
+.text-14{
+  font-size: 14px;
+}
+.text-15{
+  font-size: 15px;
+}
+.text-16{
+  font-size: 16px;
+}
+.text-17{
+  font-size: 17px;
+}
+.text-18{
+  font-size: 18px;
+}
+.text-19{
+  font-size: 19px;
+}
+.text-20{
+  font-size: 20px;
+}
+
+.bg-hover-light:hover{
+  transition: all 0.15s ease;
+  background-color: #F3F5F9 !important;
+}
+.course-progress-text-90{
+  width: 100px;
+  height: 15px;
+  transform: rotate(-90deg);
+  margin-left: -50px;
+  margin-right: -50px;
+  margin-top: 85px;
+}
+.h-280-px{
+  height: 280px;
+}
+.h-300px{
+  height: 300px;
+}
